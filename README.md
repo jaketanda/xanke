@@ -5,7 +5,7 @@ General purpose Discord bot
 To run, create a .env file and add these two keys:
 * `TOKEN=<Token from discord.com/developers>`
 * `TESTGUILD=<Guild id you want to test in>`
-
+* `MONGO_URI=<URI from mongodb>`
 
 Then run:
 
