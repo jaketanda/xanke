@@ -1,10 +1,12 @@
 import DiscordJS, { Intents } from 'discord.js'
 import WOKCommands from 'wokcommands'
 import path from 'path'
-import mongoose from 'mongoose'
 import dotenv from 'dotenv'
 
 dotenv.config()
+
+// @jaketanda and @strong-pointer
+const botOwners = ['109060566210859008', '215594590135255040']
 
 const client = new DiscordJS.Client({
     intents: [
@@ -22,7 +24,8 @@ client.on('ready', () => {
         featuresDir: path.join(__dirname, 'features'),
         typeScript: true,
         testServers: [process.env.TESTGUILD!],
-        mongoUri: process.env.MONGO_URI
+        mongoUri: process.env.MONGO_URI,
+        botOwners: botOwners
     })
 })
 
